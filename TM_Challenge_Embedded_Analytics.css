@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+
+/* Set the height for objects */
+div.qvobject,
+div.qvplaceholder,
+div.qvobjectsm,
+div.qvplaceholdersm {
+    padding: 30px 10px 10px 10px;
+    height: 500px;
+}
+
+div.qvobjectsm,
+div.qvplaceholdersm {
+    height: 300px;
+}
+
+nav,
+.navbar,
+.navbar-expand-lg,
+.bg-light * {
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FF5A5F;
+    color: #fff;
+}
+
+nav a,
+span {
+    margin: 5px;
+}
+
+#top .banner,
+#top #topbanner,
+#bottombanner {
+    background-color: #FF5A5F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#top .banner,
+#top #topbanner {
+    height: 130px;
+}
+
+#top img {
+    display: block;
+    width: 50%;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+#top #topbanner h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 60px;
+}
+
+#top #topbanner {
+    height: 180px;
+}
+
+#bottombanner {
+    height: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+
+footer {
+    background-color: #FF5A5F;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #top #topbanner h1 {
+        font-size: 32px;
+        padding-top: 40px;
+    }
+
+    #bottombanner {
+        font-size: 32px;
+    }
+}
