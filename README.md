@@ -7,3 +7,6 @@ The intended audience for this project includes real estate agents, investors, a
 
 ## Dashboard Objectives
 The core of this project is a comprehensive dashboard designed to elucidate the key elements contributing to a property's value and its suitability for listing on Airbnb. The primary goal is to assist property professionals in identifying factors that lead to a higher return on investment.
+
+## Hosting
+This repo is supposed to be hosted, it contains embedded qlik visualisations.
