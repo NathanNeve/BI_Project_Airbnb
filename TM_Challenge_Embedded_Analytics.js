@@ -54,15 +54,31 @@ login().then(() => {
         } );
 //*********************DO NOT CHANGE**************************** */
 
+var appId = '0a99637f-8c27-4c64-8d5e-ca4cd404bceb';
+
+// Connect to the Qlik Sense app
+var app = qlik.openApp(appId, config);
+
+// Embed the sheet into the specified container
+
 //*********************CHANGE HERE***************************** */
 
-//Make a connection to your application
-var app = qlik.openApp('5d1decde-6563-409c-be9d-ecfc72f7ab01', config);
-
 //Embed visualizations into your webpage
+
+// Embed visualizations into your webpage
 app.visualization.get('LPdNeR').then(function(vis){
-		vis.show("QV01");
+    vis.show("QV01");
 });
+
+app.visualization.get('VdjFsjx').then(function(vis){
+    vis.show("QV02");
+});
+
+$('.clear_selections').on('click',function(){
+    app.clearAll();
+})
+
+
 //Clear Selection function 
 
 //*********************CHANGE HERE***************************** */

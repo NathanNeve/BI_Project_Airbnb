@@ -5,7 +5,7 @@ div.qvobject,
 div.qvplaceholder,
 div.qvobjectsm,
 div.qvplaceholdersm {
-    padding: 30px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     height: 500px;
 }
 
@@ -64,13 +64,16 @@ span {
 }
 
 #bottombanner {
-    height: 100px;
+    height: 200px;
     color: white;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
 }
 
+#bottombanner p {
+    font-size: 16px; 
+}
 footer {
     background-color: #FF5A5F;
     font-family: 'Raleway', sans-serif;
@@ -86,6 +89,12 @@ a:focus,
 a:active,
 a:visited {
     color: #fff;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    width: 200px;
 }
 
 /* Media Query for smaller screens */
