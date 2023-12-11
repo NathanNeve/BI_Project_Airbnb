@@ -66,6 +66,11 @@ var app = qlik.openApp(appId, config);
 //Embed visualizations into your webpage
 
 // Embed visualizations into your webpage
+// clearall button
+$('.clear_selections').on('click',function(){
+    app.clearAll();
+})
+
 app.visualization.get('LPdNeR').then(function(vis){
     vis.show("QV01");
 });
@@ -74,13 +79,30 @@ app.visualization.get('VdjFsjx').then(function(vis){
     vis.show("QV02");
 });
 
-$('.clear_selections').on('click',function(){
-    app.clearAll();
-})
+app.visualization.get('FPXjmBW').then(function(vis){
+    vis.show("QV03");
+});
 
-
-//Clear Selection function 
-
-//*********************CHANGE HERE***************************** */
+// app.visualization.get('').then(function(vis){
+//     vis.show("");
 });
 });
+
+// own function to display the investor perspective
+function showInvestorPerspective() {
+    var investorPerspectiveDiv = document.getElementById('investorPerspective');
+    var hostPerspectiveDiv = document.getElementById('hostPerspective');
+
+    investorPerspectiveDiv.classList.toggle('d-none');
+    hostPerspectiveDiv.classList.add('d-none'); // Hide host perspective div
+}
+
+// own function to display the host perspective
+function showHostPerspective() {
+    var investorPerspectiveDiv = document.getElementById('investorPerspective');
+    var hostPerspectiveDiv = document.getElementById('hostPerspective');
+
+    hostPerspectiveDiv.classList.toggle('d-none');
+    investorPerspectiveDiv.classList.add('d-none'); // Hide investor perspective div
+    
+}

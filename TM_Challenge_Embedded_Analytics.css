@@ -38,11 +38,6 @@ span {
     justify-content: center;
 }
 
-#top .banner,
-#top #topbanner {
-    height: 130px;
-}
-
 #top img {
     display: block;
     width: 50%;
@@ -60,11 +55,11 @@ span {
 }
 
 #top #topbanner {
-    height: 180px;
+    height: 200px;
 }
 
 #bottombanner {
-    height: 200px;
+    height: 280px;
     color: white;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -96,6 +91,7 @@ button {
     padding: 10px;
     width: 200px;
 }
+
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
