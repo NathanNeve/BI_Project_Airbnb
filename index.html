@@ -53,8 +53,8 @@
               </p>
 
               <div>
-                <button class="btn btn-primary" onclick="showInvestorPerspective()">Investor Perspective</button>
-                <button class="btn btn-secondary" onclick="showHostPerspective()">Host Perspective</button>
+                <button class="btn btn-primary clear_selections" onclick="showInvestorPerspective()">Investor Perspective</button>
+                <button class="btn btn-secondary clear_selections" onclick="showHostPerspective()">Host Perspective</button>
             </div>
 
             </div>
@@ -82,10 +82,14 @@
       <!-- Host Perspective -->
       <div class="d-none" id="hostPerspective">
 
-        <div class="col-md-6">
-          <div id="QV03" class="qvobject"></div>
-        </div>
+        <div class="container">
+          <button class="btn btn-secondary clear_selections m-2" href="#">Clear Selections</button>
 
+          <div class="col-md-6">
+            <div id="QV03" class="qvobject"></div>
+          </div>
+
+        </div>
       </div>
 
 

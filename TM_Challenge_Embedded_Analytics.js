@@ -99,10 +99,11 @@ function showInvestorPerspective() {
 
 // own function to display the host perspective
 function showHostPerspective() {
+    
     var investorPerspectiveDiv = document.getElementById('investorPerspective');
     var hostPerspectiveDiv = document.getElementById('hostPerspective');
+    
 
     hostPerspectiveDiv.classList.toggle('d-none');
     investorPerspectiveDiv.classList.add('d-none'); // Hide investor perspective div
-    
 }
