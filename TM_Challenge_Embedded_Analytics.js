@@ -4,7 +4,7 @@
  * Application Name: Mastering Market Dynamics for Profitable Hosting
  */
 
-//Change to your Qlik Sense Tenant
+// Qlik Sense Tenant
  var config = {
     host: 's11teoj2ewfxo25.eu.qlikcloud.com',
     prefix: '/',
@@ -13,7 +13,6 @@
     webIntegrationId: 'fD7MaGj9cDjkwmIIyD7fIT4YaDwqk-e5'
 };
 
-//*********************DO NOT CHANGE**************************** */
 //Redirect to login if user is not logged in
 async function login() {
   function isLoggedIn() {
@@ -52,18 +51,12 @@ login().then(() => {
         $( "#closePopup" ).click( function () {
             $( '#popup' ).hide();
         } );
-//*********************DO NOT CHANGE**************************** */
+
 
 var appId = '0a99637f-8c27-4c64-8d5e-ca4cd404bceb';
 
 // Connect to the Qlik Sense app
 var app = qlik.openApp(appId, config);
-
-// Embed the sheet into the specified container
-
-//*********************CHANGE HERE***************************** */
-
-//Embed visualizations into your webpage
 
 // Embed visualizations into your webpage
 // clearall button
@@ -83,27 +76,100 @@ app.visualization.get('FPXjmBW').then(function(vis){
     vis.show("QV03");
 });
 
-// app.visualization.get('').then(function(vis){
-//     vis.show("");
+app.visualization.get('FhYHPs').then(function(vis){
+    vis.show("QV04");
+});
+app.visualization.get('QUqDZU').then(function(vis){
+    vis.show("QV05");
+});
+app.visualization.get('bGxbmVY').then(function(vis){
+    vis.show("QV06");
+});
+
+app.visualization.get('UjzGUQm').then(function(vis){
+    vis.show("QV07");
+});
+
+app.visualization.get('').then(function(vis){
+    vis.show("");
+});
+
+app.visualization.get('').then(function(vis){
+    vis.show("");
+});
+
+app.visualization.get('').then(function(vis){
+    vis.show("");
+});
+
 });
 });
 
-// own function to display the investor perspective
-function showInvestorPerspective() {
-    var investorPerspectiveDiv = document.getElementById('investorPerspective');
-    var hostPerspectiveDiv = document.getElementById('hostPerspective');
 
-    investorPerspectiveDiv.classList.toggle('d-none');
-    hostPerspectiveDiv.classList.add('d-none'); // Hide host perspective div
+function scrollToLocation() {
+    var locationElement = document.getElementById('Location');
+    locationElement.scrollIntoView({ behavior: 'smooth' });
 }
 
-// own function to display the host perspective
-function showHostPerspective() {
-    
-    var investorPerspectiveDiv = document.getElementById('investorPerspective');
-    var hostPerspectiveDiv = document.getElementById('hostPerspective');
-    
+function scrollToLabels() {
+    var locationElement = document.getElementById('Labels');
+    locationElement.scrollIntoView({ behavior: 'smooth' });
+}
 
-    hostPerspectiveDiv.classList.toggle('d-none');
-    investorPerspectiveDiv.classList.add('d-none'); // Hide investor perspective div
+function scrollToReviews() {
+    var locationElement = document.getElementById('Reviews');
+    locationElement.scrollIntoView({ behavior: 'smooth' });
+}
+
+// own function to display the location page
+function showLocation() {
+    var Location = document.getElementById('Location');
+    var Labels = document.getElementById('Labels');
+    var Reviews = document.getElementById('Reviews');
+
+    Location.classList.toggle('d-none');
+    Labels.classList.add('d-none'); // Hide labels div
+    Reviews.classList.add('d-none'); // Hide reviews div
+}
+
+// own function to display the labels page
+function showLabels() {
+    var Location = document.getElementById('Location');
+    var Labels = document.getElementById('Labels');
+    var Reviews = document.getElementById('Reviews');
+
+    Labels.classList.toggle('d-none');
+    Location.classList.add('d-none'); // Hide Location div
+    Reviews.classList.add('d-none'); // Hide Reviews div
+}
+
+// own function to display the reviews page
+function showReviews() {
+    var Location = document.getElementById('Location');
+    var Labels = document.getElementById('Labels');
+    var Reviews = document.getElementById('Reviews');
+
+    Reviews.classList.toggle('d-none');
+    Labels.classList.add('d-none'); // Hide Labels div
+    Location.classList.add('d-none'); // Hide Location div
+}
+
+
+// topbutton
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

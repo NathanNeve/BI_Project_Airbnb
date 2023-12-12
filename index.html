@@ -18,6 +18,8 @@
         <link rel="icon" type="image/x-icon" href="static/favicon.ico"/>
         <!-- Bootstrap)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- fontawesome icon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <!--Get Require JS from your Tenant; TODO: Change Host to your tenant-->
 	    <script src="https://s11teoj2ewfxo25.eu.qlikcloud.com/resources/assets/external/requirejs/require.js"></script>
         <!--Get Qlik Styles from your Tenant; TODO: Change Host to your tenant-->
@@ -27,17 +29,16 @@
 
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
-              <a class="navbar-brand" href="#">BI project</a>
+              <p class="navbar-brand">BI project</p>
                 <span class="navbar-text ml-auto">
                     Created by Nathan Neve under supervision of Thomas More and Epicdata
                 </span>
           </div>
       </nav>
       
-          
-
+        <!-- Page Content-->
         <div id="top">
             <div id="topbanner"><h1>Mastering Market Dynamics for Profitable Hosting</h1></div>
             <div>
@@ -47,51 +48,96 @@
               <h1>Story</h1>
               <p>Welcome to an exploration of the Airbnb landscape across three cities in Belgium: Antwerp, Ghent, and Brussels, with a focus on their interactions with the housing market. 
                 <br>
-                My project is designed to assist investors and people seeking properties to list on Airbnb.
-                <br><br>
-                Put yourself in the shoes of an investor or a potential Airbnb host, explore and learn! 
+                Put yourself in the shoes of an investor or a potential Airbnb host, explore and learn!
               </p>
 
-              <div>
-                <button class="btn btn-primary clear_selections" onclick="showInvestorPerspective()">Investor Perspective</button>
-                <button class="btn btn-secondary clear_selections" onclick="showHostPerspective()">Host Perspective</button>
-            </div>
+              
+              <div id="QV04" class="qvobject KPI"></div>
+              <div id="QV05" class="qvobject KPI"></div>
+              
+              <p>Click on these key factors to discover their influence in our story</p>
+
+              <div id="factors">
+                <button class="btn btn-secondary clear_selections" onclick="showLocation(); scrollToLocation();">Location</button>
+                <button class="btn btn-secondary clear_selections" onclick="showLabels(); scrollToLabels();">Labels</button>
+                <button class="btn btn-secondary clear_selections" onclick="showReviews(); scrollToReviews();">Reviews</button>
+              </div>
 
             </div>
         </div>
 
-        <!-- Investor Perspective -->
-        <div class="d-none" id="investorPerspective">
+        <!-- Location -->
+        <div class="d-none" id="Location">
 
+          <div class="banner">
+            <h2>Location and it's influence on prices</h2>
+            <p>The price of an Airbnb is significantly influenced by its location. Various factors come into play when determining the cost based on where the property is situated.
+              <br>
+              In Antwerp and Ghent we notice that prices are significantly higher in the city center. In Brussels we see that there is a clear divide between the rich south municipalities and the cheaper northern municipalities.</p>
+          </div>
+          
           <div class="container">
-              <button class="btn btn-secondary clear_selections m-2" href="#">Clear Selections</button>
+            <button class="btn btn-secondary clear_selections m-2" href="#">Clear Selections</button>
       
-              <div class="row">
-                  <div class="col-md-6">
-                      <div id="QV02" class="qvobject"></div>
-                  </div>
-                  <div class="col-md-6">
-                      <div id="QV01" class="qvobject"></div>
-                  </div>
-              </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="QV02" class="qvobject"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="QV01" class="qvobject"></div>
+                </div>
+            </div>
           </div>
 
-      </div>
+        </div>
 
 
-      <!-- Host Perspective -->
-      <div class="d-none" id="hostPerspective">
+      <!-- Labels -->
+      <div class="d-none" id="Labels">
+
+        <div class="banner" >
+          <h2>The importance of labels</h2>
+          <p>When assigning labels to your Airbnb, think twice, because this could significantly influence your revenue.
+          <br>
+          When looking at a loft and a condo, there is a big difference in price, but the properties don't differ that much.</p>
+        </div>
 
         <div class="container">
           <button class="btn btn-secondary clear_selections m-2" href="#">Clear Selections</button>
 
-          <div class="col-md-6">
-            <div id="QV03" class="qvobject"></div>
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+              <div id="QV03" class="qvobject"></div>
+            </div>
+            <div class="col-md-6">
+              <p class="nicetext alignright">"Labels are an important part of hosting an Airbnb"</p>
+            </div>
+            
           </div>
-
+          
+          
         </div>
       </div>
 
+      <!-- Reviews -->
+      <div class="d-none" id="Reviews">
+        <div class="banner">
+          <h2>The better the reviews, the more you can ask!</h2>
+        </div>
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+              <p class="nicetext alignleft">"Notice how the price of the airbnbs goes up, when the reviews are higher"</p>
+            </div>
+            <div class="col-md-6">
+              <div id="QV07" class="qvobject"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to top button -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
         <!-- Footer -->
         <footer>
