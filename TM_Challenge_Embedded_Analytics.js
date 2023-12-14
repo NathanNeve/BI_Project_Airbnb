@@ -90,16 +90,16 @@ app.visualization.get('UjzGUQm').then(function(vis){
     vis.show("QV07");
 });
 
-app.visualization.get('').then(function(vis){
-    vis.show("");
+app.visualization.get('bGxbmVY').then(function(vis){
+    vis.show("QV08");
 });
 
-app.visualization.get('').then(function(vis){
-    vis.show("");
+app.visualization.get('yBujEJm').then(function(vis){
+    vis.show("QV09");
 });
 
-app.visualization.get('').then(function(vis){
-    vis.show("");
+app.visualization.get('jWPApc').then(function(vis){
+    vis.show("QV10");
 });
 
 });
