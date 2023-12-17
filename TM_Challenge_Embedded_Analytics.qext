@@ -1,13 +1,13 @@
 {
     "type": "mashup",
-    "name": "Your Name",
+    "name": "Nathan Neve",
     "version": "1.0.0",
-    "description": "Your description",
-    "homepage": "",
+    "description": "business intelligence project EpicData - AirBnb",
+    "homepage": "http://127.0.0.1:5500/index.html",
     "author": "",
     "keywords": "qlik-sense, mashup",
     "license": "",
-    "repository": "",
+    "repository": "https://github.com/NathanNeve/BI_Project_Airbnb.git",
     "dependencies": {
         "qlik-sense": ">=2.1.x"
     }
