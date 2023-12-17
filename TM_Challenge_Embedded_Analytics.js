@@ -101,11 +101,10 @@ app.visualization.get('yBujEJm').then(function(vis){
 app.visualization.get('jWPApc').then(function(vis){
     vis.show("QV10");
 });
-
 });
 });
 
-
+// own function that scrolls to page when button is clicked
 function scrollToLocation() {
     var locationElement = document.getElementById('Location');
     locationElement.scrollIntoView({ behavior: 'smooth' });
@@ -121,7 +120,7 @@ function scrollToReviews() {
     locationElement.scrollIntoView({ behavior: 'smooth' });
 }
 
-// own function to display the location page
+// own function to display the location page and hide the others
 function showLocation() {
     var Location = document.getElementById('Location');
     var Labels = document.getElementById('Labels');
@@ -132,7 +131,7 @@ function showLocation() {
     Reviews.classList.add('d-none'); // Hide reviews div
 }
 
-// own function to display the labels page
+// own function to display the labels page and hide the others
 function showLabels() {
     var Location = document.getElementById('Location');
     var Labels = document.getElementById('Labels');
@@ -143,7 +142,7 @@ function showLabels() {
     Reviews.classList.add('d-none'); // Hide Reviews div
 }
 
-// own function to display the reviews page
+// own function to display the reviews page and hide the others
 function showReviews() {
     var Location = document.getElementById('Location');
     var Labels = document.getElementById('Labels');
@@ -158,7 +157,7 @@ function showReviews() {
 // topbutton
 let mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// wanneer de gebruiker 20px naar onderen scrollt wordt de button getoond
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
